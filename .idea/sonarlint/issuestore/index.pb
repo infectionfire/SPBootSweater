@@ -11,10 +11,6 @@ q
 Asrc/main/java/com/example/sweater/accessingdatamysql/Message.java,e\2\e2da390af4450c5befea5b3b8ad26d4d918224ee
 x
 Hsrc/main/java/com/example/sweater/controller/RegistrationController.java,e\2\e2383ae4b4b27dc27691a2a94b8f2b23fe39ec08
-n
->src/main/java/com/example/sweater/accessingdatamysql/Role.java,5\8\58b14c55eb8052d1cf8f57961afdf7876f61a60d
-o
-?src/main/java/com/example/sweater/config/WebSecurityConfig.java,8\c\8c2b5f64bdb0951e85d01cabb0d22e9a88c13d87
 j
 :src/main/java/com/example/sweater/repository/UserRepo.java,4\a\4aabc810b0b728600b71bf7aab607f389f9318e5
 s
@@ -23,5 +19,5 @@ j
 :src/main/java/com/example/sweater/service/UserService.java,1\7\174708d8517a59ab57bf70de28a417e30836ae6a
 g
 7src/main/java/com/example/sweater/config/MvcConfig.java,9\6\96bece51d0615073669c0583f09f35d7273c1cad
-n
->src/main/java/com/example/sweater/accessingdatamysql/User.java,8\9\89b70e825581ed145761b3c2c651d979ccbe4bfa
+7
+pom.xml,4\4\442292b8a7efeabbe4cc176709b833b1792140ec
