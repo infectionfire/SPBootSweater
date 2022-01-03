@@ -4,9 +4,6 @@
 SPBoot.iml,7\4\748e23f9949bf6d563a750e38a27ddef6a7397b8
 m
 =src/main/java/com/example/sweater/repository/MessageRepo.java,0\8\087361bcc31227831184f6ccdfbaaf68d8f16245
-:
-
-.gitignore,a\5\a5cc2925ca8258af241be7e5b0381edf30266302
 x
 Hsrc/main/java/com/example/sweater/controller/RegistrationController.java,e\2\e2383ae4b4b27dc27691a2a94b8f2b23fe39ec08
 j
