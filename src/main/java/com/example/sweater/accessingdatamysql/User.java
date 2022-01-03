@@ -22,6 +22,10 @@ public class User implements UserDetails {
 
     private boolean active;
 
+    public boolean isAdmin(){
+        return roles.contains(Role.ADMIN);
+    }
+
     @ElementCollection(targetClass =  Role.class, fetch = FetchType.EAGER)
     //создаем таблицу, соединяемую с текущей таблицей через юзер ид
     @CollectionTable(name = "userRole", joinColumns = @JoinColumn(name = "user_id"))
