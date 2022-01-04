@@ -1,7 +1,7 @@
 package com.example.sweater.service;
 
-import com.example.sweater.accessingdatamysql.Role;
-import com.example.sweater.accessingdatamysql.User;
+import com.example.sweater.domain.Role;
+import com.example.sweater.domain.User;
 import com.example.sweater.repository.UserRepo;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.userdetails.UserDetails;

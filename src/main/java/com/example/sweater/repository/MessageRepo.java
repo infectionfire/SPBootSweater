@@ -1,6 +1,6 @@
 package com.example.sweater.repository;
 
-import com.example.sweater.accessingdatamysql.Message;
+import com.example.sweater.domain.Message;
 import org.springframework.data.repository.CrudRepository;
 
 import java.util.List;

@@ -1,7 +1,7 @@
 package com.example.sweater.controller;
 
-import com.example.sweater.accessingdatamysql.Message;
-import com.example.sweater.accessingdatamysql.User;
+import com.example.sweater.domain.Message;
+import com.example.sweater.domain.User;
 import com.example.sweater.repository.MessageRepo;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
