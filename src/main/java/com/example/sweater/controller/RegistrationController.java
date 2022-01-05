@@ -1,6 +1,7 @@
 package com.example.sweater.controller;
 
 import com.example.sweater.domain.User;
+
 import com.example.sweater.domain.dto.CaptchaResponseDto;
 import com.example.sweater.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;

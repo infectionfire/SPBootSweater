@@ -1,4 +1,4 @@
-package com.example.sweater.accessingdatamysql;
+package com.example.sweater.domain;
 
 
 import org.springframework.security.core.GrantedAuthority;

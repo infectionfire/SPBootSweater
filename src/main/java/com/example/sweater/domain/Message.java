@@ -1,4 +1,4 @@
-package com.example.sweater.accessingdatamysql;
+package com.example.sweater.domain;
 
 import org.hibernate.validator.constraints.Length;
 
