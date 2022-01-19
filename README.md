@@ -13,7 +13,7 @@
 
 ![alt-текст](https://i.ibb.co/RSp8418/1.png "Стартовая страница")
 ![alt-текст](https://i.ibb.co/TTp29YF/2.png "Лента сообщений")
-![alt-текст](hhttps://i.ibb.co/nbHGhs3/3.png "Личная страница")
+![alt-текст](https://i.ibb.co/nbHGhs3/3.png "Личная страница")
 ![alt-текст](https://i.ibb.co/fptHsDJ/4.png "Страница редактирования учетной записи")
 ![alt-текст](https://i.ibb.co/WHN6BrM/5.png "Страница редактирования учетной записи")
 
