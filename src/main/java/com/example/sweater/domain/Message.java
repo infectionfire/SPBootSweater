@@ -1,28 +1,38 @@
 package com.example.sweater.domain;
 
+import com.example.sweater.domain.util.MessageHelper;
 import org.hibernate.validator.constraints.Length;
 
 import javax.persistence.*;
 import javax.validation.constraints.NotBlank;
+import java.util.HashSet;
+import java.util.Set;
 
 @Entity
 public class Message {
-
-
     @Id
-    @GeneratedValue(strategy= GenerationType.AUTO)
+    @GeneratedValue(strategy=GenerationType.AUTO)
     private Long id;
 
     @NotBlank(message = "Please fill the message")
     @Length(max = 2048, message = "Message too long (more than 2kB)")
     private String text;
-    @Length(max = 255, message = "Tag too long")
+    @Length(max = 255, message = "Message too long (more than 255)")
     private String tag;
-    private String filename;
 
     @ManyToOne(fetch = FetchType.EAGER)
     @JoinColumn(name = "user_id")
     private User author;
+
+    private String filename;
+
+    @ManyToMany
+    @JoinTable(
+            name = "message_likes",
+            joinColumns = { @JoinColumn(name = "message_id") },
+            inverseJoinColumns = { @JoinColumn(name = "user_id")}
+    )
+    private Set<User> likes = new HashSet<>();
 
     public Message() {
     }
@@ -33,16 +43,24 @@ public class Message {
         this.tag = tag;
     }
 
-    public String getAuthorName(){
-        return author != null ? author.getUsername() : "none";
+    public String getAuthorName() {
+        return MessageHelper.getAuthorName(author);
     }
 
-    public String getFilename() {
-        return filename;
+    public User getAuthor() {
+        return author;
     }
 
-    public void setFilename(String filename) {
-        this.filename = filename;
+    public void setAuthor(User author) {
+        this.author = author;
+    }
+
+    public void setText(String text) {
+        this.text = text;
+    }
+
+    public String getText() {
+        return text;
     }
 
     public Long getId() {
@@ -53,14 +71,6 @@ public class Message {
         this.id = id;
     }
 
-    public String getText() {
-        return text;
-    }
-
-    public void setText(String text) {
-        this.text = text;
-    }
-
     public String getTag() {
         return tag;
     }
@@ -69,11 +79,19 @@ public class Message {
         this.tag = tag;
     }
 
-    public User getAuthor() {
-        return author;
+    public String getFilename() {
+        return filename;
     }
 
-    public void setAuthor(User author) {
-        this.author = author;
+    public Set<User> getLikes() {
+        return likes;
+    }
+
+    public void setLikes(Set<User> likes) {
+        this.likes = likes;
+    }
+
+    public void setFilename(String filename) {
+        this.filename = filename;
     }
 }

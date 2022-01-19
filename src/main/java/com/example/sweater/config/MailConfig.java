@@ -1,6 +1,5 @@
 package com.example.sweater.config;
 
-
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -11,7 +10,6 @@ import java.util.Properties;
 
 @Configuration
 public class MailConfig {
-
     @Value("${spring.mail.host}")
     private String host;
 
@@ -31,19 +29,19 @@ public class MailConfig {
     private String debug;
 
     @Bean
-    public JavaMailSender getMailSender(){
-       JavaMailSenderImpl mailSender = new JavaMailSenderImpl();
+    public JavaMailSender getMailSender() {
+        JavaMailSenderImpl mailSender = new JavaMailSenderImpl();
 
         mailSender.setHost(host);
+        mailSender.setPort(port);
         mailSender.setUsername(username);
         mailSender.setPassword(password);
-        mailSender.setPort(port);
-        mailSender.setProtocol(protocol);
-        Properties properties= mailSender.getJavaMailProperties();
 
-        properties.setProperty("mail.transport.protocol",protocol);
-        properties.setProperty("mail.debug",debug);//нужна для проверки ответа (ошибки)
+        Properties properties = mailSender.getJavaMailProperties();
 
-       return mailSender;
+        properties.setProperty("mail.transport.protocol", protocol);
+        properties.setProperty("mail.debug", debug);
+
+        return mailSender;
     }
 }
